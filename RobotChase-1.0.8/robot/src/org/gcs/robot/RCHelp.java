@@ -132,9 +132,7 @@ public class RCHelp extends JDialog implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent e) {
-        String cmd = e.getActionCommand();
-        if ("close".equals(cmd)) {
-            this.setVisible(false);
-        }
+        String comando = e.getActionCommand();
+            this.setVisible(!comando.equals("close"));
     }
 }
